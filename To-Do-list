@@ -1,0 +1,73 @@
+tasks = {}
+
+def add_task(task_description):
+    task_num = len(tasks) +1
+    tasks[task_num] = task_description
+    print(f"task was added:{task_description}")
+
+def show_task():
+    if not tasks:
+        print("\n No task found..")
+    else:
+        print("Your task.")
+        for task_num , task_descriptipn in tasks.items():
+            print(f"{task_num} , {task_descriptipn}")
+
+def edit_task(task_number , new_descriptioon):
+    if task_number in tasks:
+        tasks[task_number] = new_descriptioon
+        print(f" Task{task_number} was updated {new_descriptioon}")
+    else:
+        print(f"Task number {task_number} not found..")
+
+def remove_task(task_number):
+    if task_number in tasks:
+        delete_task = tasks.pop(task_number)
+        print(f"Task number {task_number} not found.. ")
+        reassign_task ()
+    else:
+        print(f"Task Number {task_number} Not found.")
+
+def reassign_task():
+    global tasks
+    tasks = { i +1 : tasks for i , tasks in enumerate(tasks.values())}
+
+while True:
+    print("\n--- To-Do List Menu ---")
+    print("1. Add Task")
+    print("2. Show All Tasks")
+    print("3. Edit Task")
+    print("4. Remove Task")
+    print("5. Exit")
+
+    user_choice = input("Select an option(1 - 5 ): ")
+
+    if user_choice == '1':
+        task_description = input("Enter the decription: ")
+        add_task(task_description)
+
+    elif user_choice =='2':
+        show_task()
+    elif user_choice =='3':
+        task_number = int(input("Enter the task number to edit: "))
+        new_descrition = input("enter the new task description: ")
+        edit_task(task_number , new_descrition)
+    elif user_choice =='4':
+        task_number = int(input("enter the task number to remove: "))
+        remove_task(task_number)
+    else:
+        break
+
+else:
+        print("Invalid choice. please select a number between 1 and 5")
+
+
+
+    
+
+
+
+
+
+
+    
