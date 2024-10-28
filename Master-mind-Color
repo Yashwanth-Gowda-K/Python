@@ -1,0 +1,68 @@
+import random
+
+colors = ['R', 'G', 'B', 'Y', 'W', 'O']
+tries = 10
+code_length = 4
+
+def generated_code():
+    code = []
+    for _ in range(code_length):
+        color = random.choice(colors)
+        code.append(color)
+    return code  # Corrected the indentation here
+
+def guess_code():
+    while True:
+        guess = input("Guess (4 colors separated by space): ").upper().split(" ")
+
+        if len(guess) != code_length:
+            print(f"You have to guess {code_length} colors.")
+            continue
+
+        for color in guess:
+            if color not in colors:
+                print(f"Invalid color: {color}. Try again...")
+                break
+        else:  # This else corresponds to the for loop, executes if no break occurred
+            return guess
+
+def check_code(guess, real_code):
+    color_counts = {color: 0 for color in colors}  # Initialize color counts
+    correct_pos = 0
+    incorrect_pos = 0
+
+    for i in range(code_length):
+        if guess[i] == real_code[i]:
+            correct_pos += 1
+        else:
+            color_counts[real_code[i]] += 1  # Count colors in the real code
+            if guess[i] in color_counts:  # Check if guess color is in the real code
+                color_counts[guess[i]] += 1
+
+    # Calculate incorrect positions
+    for color in color_counts:
+        incorrect_pos += min(color_counts[color], real_code.count(color))
+
+    return correct_pos, incorrect_pos
+
+def play_game():
+    real_code = generated_code()
+    print("This is the color guessing game:")
+    print("Available colors: " + ', '.join(colors))
+
+    for attempt in range(tries):
+        print(f"Attempt {attempt + 1} of {tries}")
+        guess = guess_code()
+        correct_pos, incorrect_pos = check_code(guess, real_code)
+
+        if correct_pos == code_length:
+            print("Congratulations! You've guessed the code correctly!")
+            break
+        else:
+            print(f"Correct colors in correct position: {correct_pos}")
+            print(f"Correct colors in incorrect position: {incorrect_pos}")
+    else:
+        print(f"Sorry! You've used all your attempts. The correct code was: {''.join(real_code)}")
+
+if __name__ == "__main__":
+    play_game()
