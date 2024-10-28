@@ -1,0 +1,36 @@
+import random
+
+def determine_winner(player_choice , computer_choice):
+    outcomes = {
+         'rock': 'scissors',
+        'scissors': 'paper',
+        'paper': 'rock'
+
+    }
+
+    if player_choice == computer_choice:
+        return "it's a tie"
+    elif outcomes[player_choice] == computer_choice:
+        return "You won"
+    else:
+        return "You lose"
+    
+def play_game():
+    choices=['rock' , 'paper', 'scissors']
+    computer_choice = random.choice(choices)
+
+    player_choice = input("Enter your chocie(rock , paper , scissor)").lower()
+
+    if player_choice not in choices:
+        print ("Invalied choice try again")
+        return
+
+    print(f"Computer choice:{computer_choice}")
+
+    result = determine_winner(player_choice , computer_choice)
+    print(result)
+
+if __name__ == "__main__":
+    play_game()
+        
+
