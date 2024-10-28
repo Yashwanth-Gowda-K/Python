@@ -1,0 +1,18 @@
+def calculate_compound_interest(principal, rate, time, compounds_per_year):
+    # Calculate compound interest using the formula
+    amount = principal * (1 + rate / compounds_per_year) ** (compounds_per_year * time)
+    interest = amount - principal
+    return round(amount, 2), round(interest, 2)
+
+# Input values
+P = float(input("Enter the principal amount (P): "))
+r = float(input("Enter the annual interest rate (in %): ")) / 100  # Convert to decimal
+t = float(input("Enter the time in years (t): "))
+n = int(input("Enter the number of times the interest is compounded per year: "))
+
+# Calculate
+final_amount, compound_interest = calculate_compound_interest(P, r, t, n)
+
+# Output
+print(f"\nFinal amount after {t} years: {final_amount}")
+print(f"Compound interest earned: {compound_interest}")
