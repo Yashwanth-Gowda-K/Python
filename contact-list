@@ -1,0 +1,83 @@
+contacts ={}
+
+#Add contacts
+
+def add_contacts(name , phone ,email):
+    contacts[name] = {'phone': phone , 'email': email}
+    print(f"Contact for {name}added")
+
+#show contacts
+def show_contacts():
+    if contacts:
+        for name , info in contacts.items():
+            print(f"Name:{name}, Phone:{info['phone']}, email: {info['email']}")
+        else:
+            print("No contact found.")
+
+#seach contact
+def search_contact(name):
+    if name in contacts:
+        print(f"Contact found: {name}->Phone:{contacts[name] ['phone']},->Email:{contacts[name]['email']}")
+    else:
+        print(f"No contact found with this name {name}")
+
+def update_contacts(name , phone=None , email=None):
+    if name in contacts:
+        contacts[name]['phone'] = phone
+        if email:
+            contacts[name['Email']] = email
+            print(f"Contact for {name} updated.")
+        else:
+            print(f"No contact found with the name{name}")
+
+
+#deleted contactas
+def delete_contact(name):
+    if name in contacts:
+        del contacts[name]
+        print(f"Contact for {name} deleted")
+    else:
+        print(f"No contact found with the name{name}")
+
+while True:
+    print("---->Contact List Menu<----")
+    print("1. Add Contact")
+    print("2. Display Contacts")
+    print("3. Search Contact")
+    print("4. Update Contact")
+    print("5. Delete Contact")
+    print("6. Exit")
+
+    choice = input("Choose an option(1-6): ")
+
+    if choice =='1':
+        name = input("Enter the name: ")
+        phone = input("Enter phone number: ")
+        email = input("Enter the email: ")
+        add_contacts(name , phone , email)
+
+    elif choice =='2':
+        show_contacts()
+
+    elif choice =='3':
+        name = input("Enter the name to search: ")
+        show_contacts(name)
+
+    elif choice =='4':
+         name = input("Enter name to update: ")
+         phone = input("Enter new phone number (leave blank if no change): ")
+         email = input("Enter new email (leave blank if no change): ")
+         update_contacts(name, phone if phone else None, email if email else None)
+    
+    elif choice == '5':
+        name = input("Enter name to delete: ")
+        delete_contact(name)
+
+    elif choice == '6':
+        print("Exiting the contact list.")
+        break
+
+    else:
+        print("Invalid option. Please choose a valid number.")
+
+
