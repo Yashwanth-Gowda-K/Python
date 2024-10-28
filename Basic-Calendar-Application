@@ -1,0 +1,49 @@
+calander = {}
+
+def add_events(date, event):
+    if date in calander:
+        calander[date].append(event)
+    else:
+        calander[date] = [event]
+        print(f"Event {event} on {date} was added")
+      
+def show_events_on_date(date):
+    if date in calander:
+        print(f"Events on {date}")
+        for i , event in enumerate(calander[date] , 1):
+            print(f"{i} , {event}")
+        else:
+            print(f"No events on found on {date}")
+
+def show_all_events():
+    if calander:
+        print("All events in the calander")
+        for date , events in calander.items():
+            print(f"Date {date}")
+            for i,event in enumerate(events , 1):
+                print(f"{i}, {event}")
+        else:
+            print("Your calander is empty")
+
+while True:
+    print("1. Add Event")
+    print("2. View events on specific Date")
+    print("3. View all events")
+    print("4. Exit")
+
+    Choice = input("Enter your choice (1 - 4 ): ")
+
+    if Choice == '1':
+        date = input("Enter the date (e.g., 2024-09-18): ")
+        event = input("Enter the event deatails: ")
+        add_events(date , event)
+    elif Choice =='2':
+        date = input("Entr the date to view")
+        show_events_on_date(date)
+    elif Choice =='3':
+        show_all_events()
+    elif Choice =='4':
+        print("Good bye!")
+        break
+    else:
+        print("Invalid enter the choice b/w (1-4)")
