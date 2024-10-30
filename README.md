@@ -14,4 +14,5 @@ Python Begginers Project
         9. Contact List 📇  
         10. Dice Roller 🎲  
         11. Encryption Program 🔒  
-        12. Rock-Paper-Scissors Game ✊✋✌️  
+        12. password generator
+        13. Rock-Paper-Scissors Game ✊✋✌️  
