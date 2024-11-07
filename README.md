@@ -22,4 +22,4 @@ Python Begginers Project
         1️⃣5️⃣ **Rock Paper Scissors Game** 🪨📄✂️  
         1️⃣6️⃣ **Shopping Cart** 🛒🛍️  
 
-Would you like more ideas on how to structure or code any of these projects?
+
