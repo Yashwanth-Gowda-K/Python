@@ -3,16 +3,23 @@ Python Begginers Project
 
 --------- > Project Names: < ---------
 
-        1. Basic Calendar Application 📅  
-        2. Calculator 🧮  
-        3. Concession Stand Program 🍿  
-        4. Currency Converter 💱  
-        5. Mastermind Color Game 🎨  
-        6. Task Management by Python 📋  
-        7. To-Do List 📝  
-        8. Compound Interest Calculator 💰  
-        9. Contact List 📇  
-        10. Dice Roller 🎲  
-        11. Encryption Program 🔒  
-        12. password generator
-        13. Rock-Paper-Scissors Game ✊✋✌️  
+
+
+        1️⃣ **Basic Calendar Application** 📅  
+        2️⃣ **Calculator** ➕➖✖️➗  
+        3️⃣ **Concession Stand Program** 🍿🥤  
+        4️⃣ **Currency Converter** 💱💵  
+        5️⃣ **Hangman Game** 🎲💀  
+        6️⃣ **Master Mind Color** 🎨🧠  
+        7️⃣ **Number Guessing Game** 🔢🤔  
+        8️⃣ **Task Management by Python** 📝📅  
+        9️⃣ **To-Do List** 📋✅  
+        🔟 **Compound Interest Calculator** 💹📈  
+        1️⃣1️⃣ **Contact List** 📇📞  
+        1️⃣2️⃣ **Dice Roller** 🎲🎲  
+        1️⃣3️⃣ **Encryption Program** 🔐🕵️‍♂️  
+        1️⃣4️⃣ **Password Generator** 🔑📃  
+        1️⃣5️⃣ **Rock Paper Scissors Game** 🪨📄✂️  
+        1️⃣6️⃣ **Shopping Cart** 🛒🛍️  
+
+Would you like more ideas on how to structure or code any of these projects?
