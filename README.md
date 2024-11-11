@@ -21,5 +21,6 @@ Python Begginers Project
         1️⃣4️⃣ **Password Generator** 🔑📃  
         1️⃣5️⃣ **Rock Paper Scissors Game** 🪨📄✂️  
         1️⃣6️⃣ **Shopping Cart** 🛒🛍️  
+        17 **org.py ( QUIZ )
 
 
