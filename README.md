@@ -4,17 +4,29 @@ Python Begginers Project
 --------- > Project Names: < ---------
 
 
-   - 📅 **1. Basic Calendar Application**
-   - ➗ **2. Calculator**
-   - 🎟️ **3. Concession Stand Program**
-   - 💱 **4. Currency Converter**
-   - 💡 **5. Hangman Game**
-   - 🔢 **6. Largest of Three Numbers**
-   - 🎨 **7. Mastermind Color Game**
-   - 🎲 **8. Number Guessing Game**
-   - 📋 **9. To-Do List**
-   - 🧮 **10. Sum of Natural Numbers**
-   - 📈 **11. Task Management**
+
+- 📅 **Basic-Calendar-Application**
+- ➗ **Calculator**
+- 🎟️ **Concession-Stand-Program**
+- 💱 **Currency-Converter**
+- 🎮 **Hangman Game.py**
+- 🔢 **Largest of Three Numbers.py**
+- 🎨 **Master-mind-Color**
+- 🎲 **Number Guessing Game.py**
+- 📄 **README.md**
+- 🧮 **Sum of Natural Numbers.py**
+- 📈 **Task-management-by-python**
+- 📝 **To-Do-list**
+- 💰 **Compound-Interest**
+- 📞 **Contact-list**
+- 🎲 **Dice-roller**
+- 🔒 **Encryption-program**
+- 📂 **Org.py**
+- 🔑 **Password Generator .py**
+- ✂️ **Rock-paper-game-by-using-python**
+- 🛒 **Shopping cart.py**
+
+
 
 
 
