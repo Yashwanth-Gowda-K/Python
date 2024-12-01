@@ -4,29 +4,32 @@ Python Begginers Project
 --------- > Project Names: < ---------
 
 
-1. **⏱️ Countdown Timer.py**  
-2. **📅 Basic-Calendar-Application**  
-3. **🧮 Calculator**  
-4. **🍿 Concession-Stand-Program**  
-5. **💱 Currency-Converter**  
-6. **🎮 Hangman Game.py**  
-7. **🔢 Largest of Three Numbers.py**  
-8. **🎨 Master-mind-Color**  
-9. **🎯 Number Guessing Game.py**  
-10. **📝 README.md**  
-11. **➕ Sum of Natural Numbers.py**  
-12. **📋 Task-management-by-python**  
-13. **✅ To-Do-list**  
-14. **🚦 Traffic_light.py**  
-15. **💰 Compuand-intereaste**  
-16. **📞 Contact-list**  
-17. **🎲 Dize-roller**  
-18. **🔒 Encryption-program**  
-19. **🔢 Factorial Finder.py**  
-20. **📂 Org.py**  
-21. **🔑 Password Generator.py**  
-22. **🪖 Rock-paper-game-by-using-python**  
-23. **🛒 Shopping Cart.py**
+Here’s your project list with emojis added for more visual appeal:
+
+1️⃣ **Countdown Timer** ⏳  
+2️⃣ **Basic Calendar Application** 📅  
+3️⃣ **Calculator** ➕➖✖️➗  
+4️⃣ **Concession Stand Program** 🍿🥤  
+5️⃣ **Currency Converter** 💱💰  
+6️⃣ **Hangman Game** 🎮🕹️  
+7️⃣ **Largest of Three Numbers** 🔢📈  
+8️⃣ **Mastermind Color** 🎨🧠  
+9️⃣ **Measure Execution Time** ⏱️⌛  
+🔟 **Number Guessing Game** 🎯🔢  
+1️⃣1️⃣ **Scheduling Tasks** 🗓️🕒  
+1️⃣2️⃣ **Sum of Natural Numbers** ➕📊  
+1️⃣3️⃣ **Task Management by Python** ✅📋  
+1️⃣4️⃣ **To-Do List** 📝✔️  
+1️⃣5️⃣ **Traffic Light** 🚦  
+1️⃣6️⃣ **Ascending and Descending Order** 📊🔼🔽  
+1️⃣7️⃣ **Compound Interest** 📈💵  
+1️⃣8️⃣ **Contact List** 📇📞  
+1️⃣9️⃣ **Dice Roller** 🎲🎲  
+2️⃣0️⃣ **Encryption Program** 🔐🧩  
+2️⃣1️⃣ **Factorial Finder** ❗🔢  
+2️⃣2️⃣ **Password Generator** 🔑🔒  
+2️⃣3️⃣ **Rock-Paper-Scissors Game** ✊✋✌️  
+2️⃣4️⃣ **Shopping Cart** 🛒🛍️  
 
 
 
