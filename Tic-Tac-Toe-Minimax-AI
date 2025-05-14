@@ -1,0 +1,141 @@
+import tkinter as tk
+from tkinter import messagebox
+import math
+
+# Define the players
+Human = 'O'
+AI = 'X'
+EMPTY = ' '
+
+class TicTacToe:
+    def __init__(self):
+        self.window = tk.Tk()
+        self.window.title("Tic Tac Toe")
+
+        # Game Board as a list of 9 empty cells
+        self.board = [EMPTY] * 9
+
+        # List to hold tkinter button objects for each cell
+        self.buttons = []
+
+        # The visual board
+        self.create_board()
+
+        # The GUI event loop
+        self.window.mainloop()
+    
+    def create_board(self):
+        # Create 9 buttons (3x3 grid) for the board
+        for i in range(9):
+            btn = tk.Button(self.window, text=EMPTY, font=('Arial', 24), width=5, height=2,
+                          command=lambda i=i: self.make_move(i))
+            btn.grid(row=i // 3, column=i % 3)
+            self.buttons.append(btn)
+
+    def make_move(self, index):
+        # Called when human clicks a button
+        if self.board[index] == EMPTY:
+            self.board[index] = Human
+            self.buttons[index].config(text=Human, state='disabled')
+
+            if not self.check_game_over():
+                self.window.after(500, self.ai_move)  # AI moves after 500ms
+    
+    def ai_move(self):
+        # AI chooses the best move using minimax algorithm
+        move = self.best_move()
+
+        if move is not None:
+            self.board[move] = AI
+            self.buttons[move].config(text=AI, state='disabled')
+            self.check_game_over()
+
+    def check_game_over(self):
+        # Check for a win or a draw
+        winner = self.check_winner()
+        if winner is not None:
+            self.disable_all_buttons()
+            messagebox.showinfo("Game Over", f"{winner} wins!")
+            self.reset_game()
+            return True
+
+        if EMPTY not in self.board:
+            self.disable_all_buttons()
+            messagebox.showinfo("Game Over", "It's a draw!")
+            self.reset_game()
+            return True
+
+        return False
+    
+    def disable_all_buttons(self):
+        # Disable all buttons after game ends
+        for btn in self.buttons:
+            btn.config(state='disabled')
+    
+    def check_winner(self):
+        # Check all winning combinations
+        wins = [
+            (0, 1, 2), (3, 4, 5), (6, 7, 8),  # Horizontal
+            (0, 3, 6), (1, 4, 7), (2, 5, 8),    # Vertical
+            (0, 4, 8), (2, 4, 6)                # Diagonal
+        ]
+        for combo in wins:
+            a, b, c = combo
+            if self.board[a] == self.board[b] == self.board[c] != EMPTY:
+                return self.board[a]
+        return None
+    
+    def reset_game(self):
+        # Reset the game board
+        self.board = [EMPTY] * 9
+        for btn in self.buttons:
+            btn.config(text=EMPTY, state='normal')
+
+    def best_move(self):
+        # Find the best move for the AI using minimax algorithm
+        best_score = -math.inf
+        best_move = None
+
+        for i in range(9):
+            if self.board[i] == EMPTY:
+                self.board[i] = AI
+                score = self.minimax(0, False)
+                self.board[i] = EMPTY
+
+                if score > best_score:
+                    best_score = score
+                    best_move = i
+
+        return best_move
+    
+    def minimax(self, depth, is_maximizing):
+        # Recursive minimax function
+        winner = self.check_winner()
+        if winner == AI:
+            return 1
+        elif winner == Human:
+            return -1
+        elif EMPTY not in self.board:
+            return 0
+        
+        if is_maximizing:
+            best_score = -math.inf
+            for i in range(9):
+                if self.board[i] == EMPTY:
+                    self.board[i] = AI
+                    score = self.minimax(depth + 1, False)
+                    self.board[i] = EMPTY
+                    best_score = max(score, best_score)
+            return best_score
+        else:
+            best_score = math.inf
+            for i in range(9):
+                if self.board[i] == EMPTY:
+                    self.board[i] = Human
+                    score = self.minimax(depth + 1, True)
+                    self.board[i] = EMPTY
+                    best_score = min(score, best_score)
+            return best_score
+
+if __name__ == "__main__":
+    TicTacToe()
