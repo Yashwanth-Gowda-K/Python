@@ -4,7 +4,7 @@ Python Begginers Project
 --------- > Project Names: < ---------
 
 
-Here’s your project list with emojis added for more visual appeal:
+Here’s your project list:
 
 1️⃣ **Countdown Timer** ⏳  
 2️⃣ **Basic Calendar Application** 📅  
